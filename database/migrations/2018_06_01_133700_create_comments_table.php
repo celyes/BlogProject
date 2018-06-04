@@ -21,7 +21,6 @@ class CreateCommentsTable extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

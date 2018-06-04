@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     //
-    protected $guarded = ['id'];
+    protected $fillable = ['body'];
     public function post(){
         return $this->belongsTo(Post::class);
     }
