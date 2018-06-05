@@ -19,4 +19,6 @@ Route::get('/post/{post}', 'PostController@show');
 Route::get('posts/create', 'PostController@create');
 Route::post('/posts', 'PostController@store');
 Route::post('/posts/{post}/comments', 'CommentsController@store');
+Route::get('/register', 'RegistrationController@create');
+Route::get('/login', 'SessionsController@create');
 /* */
