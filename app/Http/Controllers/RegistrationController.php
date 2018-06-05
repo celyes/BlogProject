@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class RegistrationController extends Controller
 {
     //
-    public function store(){
+    public function create(){
         return view('sessions.create');
     }
 }

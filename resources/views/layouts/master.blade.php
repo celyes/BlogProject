@@ -21,7 +21,7 @@
 
     <div class="container">
        @yield('header')
-        @yield('content')
+       @yield('content')
 
     </div>
     
