@@ -18,12 +18,12 @@
                     <small id="name-small" class="form-text text-muted">Choose an appropriate username</small>
                 </div>
                 <div class="form-group">
-                    <label for="name">Email</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" class="form-control">
                     <small id="email-small" class="form-text text-muted">Enter a valid email address</small>
                 </div>
                 <div class="form-group">
-                    <label for="name">Password</label>
+                    <label for="password">Password</label>
                     <input type="password" id="password" name="password" class="form-control">
                     <small id="password-small" class="form-text text-muted">Password should be more than 8 characters</small>
                 </div>
