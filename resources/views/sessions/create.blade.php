@@ -13,22 +13,22 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="name">Username</label>
-                    <input type="text" id="name" name="name" class="form-control">
+                    <input type="text" id="name" name="name" class="form-control" required>
                     <small id="name-small" class="form-text text-muted">Choose an appropriate username</small>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control">
+                    <input type="email" id="email" name="email" class="form-control" required>
                     <small id="email-small" class="form-text text-muted">Enter a valid email address</small>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" class="form-control">
+                    <input type="password" id="password" name="password" class="form-control" required>
                     <small id="password-small" class="form-text text-muted">Password should be more than 8 characters</small>
                 </div>
                 <div class="form-group">
-                    <label for="password_confirmation">Password confirmation</label>
-                    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control">
+                    <label for="password_confirmation" >Password confirmation</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" required>
                     <small id="password_confirmation_small" class="form-text text-muted">Retype the password</small>
                 </div>
                 <div class="form-group">
