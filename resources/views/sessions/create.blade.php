@@ -9,7 +9,6 @@
     <h3 class="text-center">Register a new user</h3>
     <br>
     <div class="col-sm-12 col-md-6 offset-md-3">
-            @include('layouts.errors')
             <form action="/register" method="POST">
                 {{ csrf_field() }}
                 <div class="form-group">
@@ -28,8 +27,14 @@
                     <small id="password-small" class="form-text text-muted">Password should be more than 8 characters</small>
                 </div>
                 <div class="form-group">
+                    <label for="password_confirmation">Password confirmation</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control">
+                    <small id="password_confirmation_small" class="form-text text-muted">Retype the password</small>
+                </div>
+                <div class="form-group">
                     <button class="btn btn-primary" type="submit" name="registerBtn">Register</button>
                 </div>
             </form>
-    </div>
+            @include('layouts.errors')
+        </div>
 @endsection
