@@ -12,7 +12,7 @@
     <br>
     <div class="row">
         <div class="col-md-8">
-            <form method="POST" action="/posts">
+            <form method="POST" action="/posts" class="auth-form">
               {{csrf_field()}}
              @include('layouts.errors')
               <div class="form-group">
@@ -29,7 +29,6 @@
               </div>          
             </form>
             <br>
-            
           </div>
               
           @include('layouts.sidebar')

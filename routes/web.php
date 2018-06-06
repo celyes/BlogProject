@@ -10,17 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function(){
     return view('welcome');
+})->name('home');
+Route::get('/home', function(){
+    return redirect('/posts');
 });
-Route::get('/posts', 'PostController@index')->name('home');
+Route::get('/posts', 'PostController@index')->name('posts');
 Route::get('/post/{post}', 'PostController@show');
 Route::get('posts/create', 'PostController@create');
 Route::post('/posts', 'PostController@store');
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
-Route::get('/login', 'SessionsController@create');
+Route::get('/login', 'SessionsController@login')->name('login');
+Route::post('/login', 'SessionsController@create');
 Route::get('/logout', 'SessionsController@destroy');
 /* */

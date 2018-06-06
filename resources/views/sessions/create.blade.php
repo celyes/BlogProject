@@ -9,7 +9,7 @@
     <h3 class="text-center">Register a new user</h3>
     <br>
     <div class="col-sm-12 col-md-6 offset-md-3">
-            <form action="/register" method="POST">
+            <form action="/register" method="POST" class="auth-form">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="name">Username</label>

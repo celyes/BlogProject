@@ -8,12 +8,11 @@
     <div class="container">
     <h1>{{ $post->title}}</h1>
     <br>
-    <small>{{ $post->created_at->diffForHumans() }}</small>
+    <small>by {{$post->user->name }} on {{ $post->created_at->diffForHumans() }}</small>
     <br>
     <br>
     <div class="row">
         <div class="col-md-8">
-            
         <p>
             {{ $post->body }}
         </p>
