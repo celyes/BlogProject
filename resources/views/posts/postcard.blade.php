@@ -3,7 +3,7 @@
           <div class="card flex-md-row mb-4 box-shadow h-md-250">            
             <img class="card-img flex-auto d-none d-lg-block" data-src="holder.js/200x248?theme=thumb" alt="Card image cap">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-primary">Catgory</strong>
+              <strong class="d-inline-block mb-2 text-primary">Category</strong>
               <h3 class="mb-0">
               <a class="text-dark" href="/post/{{ $post->id }}">{{ $post->title }}</a>
               </h3>

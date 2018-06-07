@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Carbon\Carbon;
+
 class PostController extends Controller
 {
     //
@@ -11,8 +13,19 @@ class PostController extends Controller
         $this->middleware('auth')->except(['index', 'show']);
     }
     public function index(){
-        $posts = Post::latest()->get();
-        return view('posts.index', compact('posts'));
+        $posts = Post::latest()
+        ->filter(request()->only(['month', 'year']))
+        ->get();
+
+        //Temporary
+
+        $archives = Post::selectRaw('year(created_at) year, monthname(created_at) month, count(*) published')
+        ->groupBy('year', 'month')
+        ->orderByRaw('min(created_at) desc')
+        ->get()
+        ->toArray();
+        
+        return view('posts.index', compact('posts', 'archives'));
     }
     public function create(){
         return view('posts.create');
