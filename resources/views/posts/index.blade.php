@@ -22,8 +22,10 @@
         </nav>
 
       </div><!-- /.blog-main -->
+      <div class="col-md-4">
+        
       @include('layouts.sidebar')
-
+      </div>
     </div><!-- /.row -->
 
   </main><!-- /.container -->
